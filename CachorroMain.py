@@ -17,7 +17,7 @@ def manipular_cachorro(cao_atual, lista_caes):
             if opcao == 1:
                 print(cao_atual.obter_dados())
             elif opcao == 2:
-                cao_atual.comer('comida')
+                cao_atual.comer()
             elif opcao == 3:
                 if cao_atual.energia >= 40:
                     print('B) Buscar bolinha\n'
