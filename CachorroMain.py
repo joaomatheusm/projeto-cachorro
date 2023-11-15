@@ -82,11 +82,14 @@ def main():
 
                 lista_caes.append(Cachorro(nome, raca, sexo, idade))
             elif opcao == 2:
-                print(f'{" COD":<4}{"NOME":>20}')
-                for i, c in enumerate(lista_caes):
-                    print(f'  {i:<1}{c.nome:>20}')
-                cao_atual = int(input('Escolha um cão para manipular: '))
-                manipular_cachorro(lista_caes[cao_atual], lista_caes)
+                if len(lista_caes) >= 1:
+                    print(f'{" COD":<4}{"NOME":>20}')
+                    for i, c in enumerate(lista_caes):
+                        print(f'  {i:<1}{c.nome:>20}')
+                    cao_atual = int(input('Escolha um cão para manipular: '))
+                    manipular_cachorro(lista_caes[cao_atual], lista_caes)
+                else:
+                    print('Nenhum cachorro foi cadastrado ainda.')
             elif opcao == 3:
                 print('<< PROGRAMA ENCERRADO >>')
                 exit(0)
